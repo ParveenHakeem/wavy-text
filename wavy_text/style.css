@@ -1,0 +1,42 @@
+body {
+    background: linear-gradient(rgb(0, 0, 0), rgb(97, 93, 94));
+    /* For older browsers */
+    background: -webkit-linear-gradient(rgb(0, 0, 0), rgb(97, 93, 94));
+    background: -moz-linear-gradient(rgb(0, 0, 0), rgb(97, 93, 94));
+    background: -o-linear-gradient(rgb(0, 0, 0), rgb(97, 93, 94));
+    background: -ms-linear-gradient(rgb(0, 0, 0), rgb(97, 93, 94));
+}
+
+.wavy {
+    
+    margin-top: 200px;
+    text-align: center;
+    color: bisque;
+    font-family: cursive; /* Updated font */
+    position: relative;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(97, 93, 94)); /* Gradient as background */
+    padding: 20px; /* Adding padding for better readability */
+    border-radius: 10px; /* Adding border radius for rounded corners */
+    box-shadow: 0 0 10px (rgb(0, 0, 0), rgb(97, 93, 94)); /* Adding a shadow effect */
+}
+
+
+.wavy span{
+    position: relative;
+    display: inline-block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    animation: wavy 1s infinite;
+    animation-delay: calc(.1s *var(--i));
+}
+
+@keyframes wavy{
+    0%,
+    40%,
+    100%{
+        transform: translateY(0)
+    }
+    20%{
+        transform: translateY(-20px)
+    }
+}
